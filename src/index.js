@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './styles/css/main.css'
+import './styles/css/plugin/bootstrap-4-utilities.min.css'
+import './styles/css/plugin/bootstrap-grid.min.css'
 
 ReactDOM.render(
   <React.StrictMode>

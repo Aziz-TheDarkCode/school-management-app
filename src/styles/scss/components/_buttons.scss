@@ -1,0 +1,22 @@
+.btn
+{
+    border: 1px solid black;
+    background-color:transparent;
+    padding:.7rem;
+    font-family:$secondary-font-stack;
+}
+.btn-primary
+{
+    background:$secondary-color;
+    border:none;
+    color:$default-color;
+    transition: .3s;
+}
+.btn-primary:hover
+{
+    background-color: darken($secondary-color, 7%);
+}
+.rounded-btn
+{
+    border-radius:3rem;
+}

@@ -1,0 +1,12 @@
+.hero__section
+{
+    width:75%;
+    margin:auto;
+    margin-top:02rem;
+    font-family:$secondary-font-stack;
+    &--text
+    {
+        line-height:2.8rem;
+         font-size: 32px;
+    }
+}
