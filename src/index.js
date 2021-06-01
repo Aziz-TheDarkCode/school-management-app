@@ -2,21 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
 
 import './styles/css/main.css'
 import './styles/css/plugin/bootstrap-4-utilities.min.css'
 import './styles/css/plugin/bootstrap-grid.min.css'
 
 ReactDOM.render(
-    <Router>
-      <App />
-    </Router>,
+   <App /> ,
   document.getElementById('root')
 );
 
