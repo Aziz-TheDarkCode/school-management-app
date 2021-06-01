@@ -3,6 +3,7 @@ import Web from './web.png'
 import Network from './network.jpg'
 import { AiOutlineArrowRight} from "react-icons/ai";
 import Cyber from './cyber-security.jpg'
+import { Link } from 'react-router-dom';
 const Coursepage = ()=>
 {
         return(
@@ -19,7 +20,9 @@ const Coursepage = ()=>
                     <Card title="Reseaux Telecom'" img={Network} description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard `} duration='3ans' color='#FBFBFB'/>       
                     <Card title="Reseaux Telecom'" img={Network} description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard `} duration='3ans' color='#FBFBFB'/>       
                 </div>
-               <p className='link d-flex align-items-center absolute'>S'inscrire Maintenant<AiOutlineArrowRight/></p> 
+            <Link to='/signup' className='router-link'>
+                    <p className='link d-flex align-items-center absolute'>S'inscrire Maintenant<AiOutlineArrowRight/></p>
+            </Link>    
             </div>
         )
 }

@@ -7,10 +7,10 @@ const Header = ()=>
         <div className='d-flex header justify-content-between align-items-center p-3 w-100'>
             <img src={logo} width='150px'/>
             <div className='d-flex header--menu'>
-                <Link to='/homepage'><NavLinks link='Accueil'/></Link>
-                <Link to='/signup'><NavLinks link='Inscription'/></Link>
-                <Link to='/signin'><NavLinks link='Connexion'/></Link>
-                <Link to='/courses'><NavLinks link='Les formations'/></Link>
+                <Link to='/homepage' className='router-link'><NavLinks link='Accueil'/></Link>
+                <Link to='/signup' className='router-link'><NavLinks link='Inscription'/></Link>
+                <Link to='/signin' className='router-link'><NavLinks link='Connexion'/></Link>
+                <Link to='/courses' className='router-link'><NavLinks link='Les formations'/></Link>
             </div> 
         </div>
 
