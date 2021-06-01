@@ -1,11 +1,12 @@
 .container
 {
     background:$default-color;
+    margin-bottom:200px;
 }
 .sidebar
 {
     position:fixed;
-    top:50%;
+    top:40%;
     img
     {
       width:30px;

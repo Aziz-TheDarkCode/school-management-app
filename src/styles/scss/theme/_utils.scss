@@ -1,7 +1,19 @@
 
 .text-larger
 {
-   
+   font-size: 35px;
+}
+.text-medium
+{
+   font-size: $medium;
+}
+.text-x-small
+{
+    font-size:$x-small;
+}
+.text-small
+{
+    font-size:$small;
 }
 .text-bold
 {
@@ -32,4 +44,29 @@
 {
     width:25%
 }
-
+.lh
+{
+    line-height: 2.5rem;
+}
+.sm-lh
+{
+    line-height:1.5rem;
+}
+.mt-6
+{
+    margin-top:5rem
+}
+.absolute
+{
+    position:absolute;
+}
+.relative
+{
+    position:relative;
+}
+.link
+{
+    bottom:10px;
+    right:10px;
+    font-size:20px;
+}

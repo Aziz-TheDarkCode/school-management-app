@@ -3,7 +3,7 @@ import NavLinks from '../components/NavLinks'
 const Header = ()=>
 {
     return(
-        <div className='d-flex header justify-content-between align-items-center p-3'>
+        <div className='d-flex header justify-content-between align-items-center p-3 w-100'>
             <img src={logo} width='150px'/>
             <div className='d-flex header--menu'>
                 <NavLinks link='Accueil'/>

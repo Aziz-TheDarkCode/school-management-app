@@ -1,0 +1,14 @@
+.section
+{
+    height: 90vh;
+    margin-top: 4.3rem;
+    color:white;
+    background-size:cover;
+}
+.card__section
+{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+   gap: 25px;
+   
+}

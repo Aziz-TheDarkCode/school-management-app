@@ -1,8 +1,10 @@
-const Button=({text,color})=>
+import { IoIosArrowForward} from "react-icons/io";
+const Button=({text,variant,width})=>
 {
+
     return(
-        <a>
-            <button className='btn  rounded-btn w-25' style={{backgroundColor:color}}>{text}</button>
+        <a href='#presentation'>
+            <button className={` d-flex align-items-center justify-content-center btn btn-${variant} rounded-btn w-${width}`}>{text}<IoIosArrowForward/></button>
         </a>
     )
 }

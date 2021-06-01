@@ -1,0 +1,21 @@
+@import '../abstract/variables';
+input
+{
+    font-family:$primary-font-stack;
+}
+input:focus
+{
+    outline:0;
+}
+.text-input
+{
+    border-top : none;
+    border-right :none;
+    border-left : none;
+    border-bottom : 3px solid gray;
+}
+.placeholder
+{
+    color: gray;
+
+}

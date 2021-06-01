@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Roboto", sans-serif;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -27,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Poppins", sans-serif;
   color: #37474F;
 }
@@ -51,16 +56,24 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   background-color: #FBFBFB;
+  position: fixed;
+  z-index: 1;
+  top: 0;
 }
 .container {
   background: #FFFFFF;
+  margin-bottom: 200px;
 }
 
 .sidebar {
   position: fixed;
-  top: 50%;
+  top: 40%;
 }
 .sidebar img {
   width: 30px;
@@ -70,15 +83,49 @@ table {
   width: 40px;
 }
 
+.section {
+  height: 90vh;
+  margin-top: 4.3rem;
+  color: white;
+  background-size: cover;
+}
+
+.card__section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.footer {
+  background: #FBFBFB;
+  height: 35vh;
+}
+
 .hero__section {
   width: 75%;
   margin: auto;
-  margin-top: 2rem;
+  margin-top: 6rem;
   font-family: "Poppins", sans-serif;
 }
 .hero__section--text {
-  line-height: 2.8rem;
+  line-height: 3.2rem;
   font-size: 32px;
+}
+
+.text-larger {
+  font-size: 35px;
+}
+
+.text-medium {
+  font-size: 22px;
+}
+
+.text-x-small {
+  font-size: 12px;
+}
+
+.text-small {
+  font-size: 14px;
 }
 
 .text-bold {
@@ -109,8 +156,34 @@ table {
   width: 25%;
 }
 
+.lh {
+  line-height: 2.5rem;
+}
+
+.sm-lh {
+  line-height: 1.5rem;
+}
+
+.mt-6 {
+  margin-top: 5rem;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.link {
+  bottom: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
 .btn {
-  border: 1px solid black;
+  border: 1px solid transparent;
   background-color: transparent;
   padding: 0.7rem;
   font-family: "Poppins", sans-serif;
@@ -129,6 +202,36 @@ table {
 
 .rounded-btn {
   border-radius: 3rem;
+}
+
+.form {
+  background-color: white;
+  color: #37474F;
+  border-radius: 0.8rem;
+}
+
+input {
+  font-family: "Roboto", sans-serif;
+}
+
+input:focus {
+  outline: 0;
+}
+
+.text-input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 3px solid gray;
+}
+
+.placeholder {
+  color: gray;
+}
+
+.card--img {
+  width: 170px;
+  height: 160px;
 }
 
 /*# sourceMappingURL=main.css.map */
