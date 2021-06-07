@@ -5,9 +5,19 @@
 }   
 .card
 {
-        box-shadow: 0 .5rem 1rem rgba(0,0,0,.15); 
+        box-shadow: 0 .5rem 1rem #00000026; 
 }
 .mini-card
 {
-    background-color: red;
+    background-color:$main-color;
+    border-radius: .7rem;
+}
+.middle-card
+{
+    background-color:$main-color;
+    border-radius: .7rem;
+    
+}
+.centered-box{
+    padding: 100px 0px;
 }
