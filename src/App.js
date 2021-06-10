@@ -7,6 +7,7 @@ import{BrowserRouter as Router ,Route,Switch,Link} from 'react-router-dom'
 import Coursepage from './pages/courses';
 import Dashboard from './pages/dashboard';
 import Fiche from './pages/fiche';
+import Signin from './pages/signin';
 
 
 
@@ -21,6 +22,7 @@ const App = () =>{
             <Route path="/courses" component={Coursepage}/>
             <Route path="/login" component={Loginpage}/>
             <Route path="/fiche" component={Fiche}/>
+            <Route path="/signin" component={Signin}/>
       </div>
     </Router>
   );
