@@ -4,7 +4,7 @@ import {AiOutlineKey} from 'react-icons/ai'
 import {AiOutlineUser} from 'react-icons/ai'
 const Formul = ({title})=>{
     return(
-        <div className='form col-3 p-5 mt-3 mb-5'>
+        <div className='form col-3 p-5 mt-3 mb-5 w-75'>
             <p className='text-larger text-bold mb-5 ml-2'>{title}</p>
             <div className=''>
                  <div className=''>
