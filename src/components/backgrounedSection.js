@@ -10,7 +10,6 @@ const BackgrounedSection =()=>
                 <p className='text-larger mb-5'>SUP'INFO</p>
                 <p className='text-larger'>INTERNATIONAL IT ACADEMY OF DAKAR</p>
              </div>
-             <Form title='Inscription'/>
         </div>
     )
 }
