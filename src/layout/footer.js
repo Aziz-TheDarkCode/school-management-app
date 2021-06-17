@@ -2,7 +2,7 @@ import Logo from './logo.jpg'
 const Footer =()=>
 {
     return(
-        <div className='d-flex footer p-3 align-items-center'>
+        <div className='d-flex footer p-3 align-items-center' id="#footer">
             {/* <img src={Logo}/ > */}
             <div className='col-6 p-3'>
                 <p className='text-larger text-bold mb-2'>Groupe Sup'info</p>

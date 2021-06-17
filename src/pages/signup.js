@@ -1,5 +1,5 @@
 import  BackgrounedSection from '../components/backgrounedSection'
-import Form from '../components/form'
+import{Link} from "react-router-dom"
 import Input from '../components/input'
 import Button from '../components/buttons'
 import {AiOutlineKey} from 'react-icons/ai'
@@ -15,11 +15,11 @@ const SignUppage = () =>
     const [ input , setInput ] = useState({
         name : "",
         date_of_birth : "",
-         faculty: "1",
         year: "",
         mail : "",
         password : "",
 })
+const [select,setSelect] =useState()
 
 
 const handler =(event)=>
@@ -27,10 +27,19 @@ const handler =(event)=>
     setInput({...input,[event.target.name] : event.target.value})
     return input
 }
+    const dropdownhandler = (event)=>
+    {
+    setSelect({[event.target.name] : event.target.value})
+        console.log(select)
+        return select  
+    }
 const login = ()=>
 {
-     console.log(input)
-     PostData(input)
+    const formDatas ={
+        ...select,
+        ...input
+    }
+     PostData(formDatas)
 }
     return(
        <>
@@ -50,11 +59,11 @@ const login = ()=>
                         <span>Filiere</span> 
                         <span className='ml-2'><AiOutlineBook/></span>
                     </div>
-                 <select name="faculty" className='text-input w-100'  onChange={()=>{handler()}}>
-                        <option value="Web">Web Developement</option>
-                        <option value="Cyber">Cyber Security</option>
-                        <option value="Reseau">Reseau Telecommunications</option>
-                        <option value="Info-gestion">Informatique de gestion</option>
+                 <select name="faculty" className='text-input w-100'   onChange={(event)=>{dropdownhandler(event)}}>
+                        <option value="1">Web Developement</option>
+                        <option value="2">Cyber Security</option>
+                        <option value="3">Reseau Telecommunications</option>
+                        <option value="4">Informatique de gestion</option>
                  </select>
                   </div>
                  
@@ -66,7 +75,9 @@ const login = ()=>
                    {/* <Input placeholder='Confirmer Mot de passe' icon={<AiOutlineKey/>} inputType='password' name = "passwordConfirm" onchange={handler}/> */}
                  </div>
             </div>
+            <Link to='/signin'>
             <Button text="S'inscrire" variant='primary' width='100'  onclick={login}/>
+                </Link>
         </div>
 
         </div>

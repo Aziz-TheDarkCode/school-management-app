@@ -1,6 +1,6 @@
 <?php
 
-use function PHPSTORM_META\type;
+// use function PHPSTORM_META\type;
 
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");

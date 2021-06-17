@@ -1,33 +1,67 @@
 <?php
+
     class Students
     {
 		private $conn;
 		private $table="student";
 
  
-		 	public $id;
+         public $id;
 		  public $name;
 		  public $mail;
+		  
 		  public $date_of_birth;
 		 public $faculty;
 		 public $year;
 		 public $password;
+		 public $status;
+		 
+
 		 public function __construct($db)
 		 {
 				 $this->conn = $db;
 		 }
+
 		 public function read()
 		 {
 			   $query ="SELECT * FROM $this->table";
 
 			   $stmt = $this->conn->prepare($query);
+			   
 
 		 // Execute query
 		 $stmt->execute();
 
 		 return $stmt; 
 		 }
-		 
+		 public function read_single()
+		 {
+			   $query ="SELECT * FROM $this->table WHERE mail=:mail  AND password=:password";
+
+			   $this->mail = htmlspecialchars(strip_tags($this->mail));
+			   $this->password = htmlspecialchars(strip_tags($this->password));
+
+			  $stmt = $this->conn->prepare($query);
+
+			  $stmt->bindParam(":mail" , $this->mail);
+			  $stmt->bindParam(":password" , $this->password);
+
+		 // Execute query
+		 $stmt->execute();
+
+		 return $stmt; 
+
+		 $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+          // Set properties
+          $this->name = $row['name'];
+          $this->mail = $row['mail'];
+          $this->date_of_birth = $row['date_of_birth'];
+          $this->password = $row['password'];
+          $this->faculty = $row['faculty'];
+          $this->year= $row['year'];
+		 }
+			 
  public function create(){
 	 
 	$query = 'INSERT INTO ' . $this->table . ' SET name = :name, date_of_birth = :dob, mail = :mail, password = :password, faculty=:faculty, year=:year';

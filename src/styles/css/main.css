@@ -190,6 +190,10 @@ a {
   margin: auto;
 }
 
+.top {
+  top: 0;
+}
+
 .btn {
   border: 1px solid transparent;
   background-color: transparent;
@@ -258,7 +262,7 @@ input:focus {
 }
 
 .centered-box {
-  padding: 50px 0px;
+  padding: 100px 0px;
 }
 
 .table {

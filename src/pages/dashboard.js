@@ -1,47 +1,40 @@
 import MiniCard from '../components/minicard'
 import B_card from '../components/b-card.js'
 import Table from '../components/table'
+import { getAllStudents } from '../data/GET'
+import { useEffect } from 'react'
 
 function Dashboard(){
-    return(
-        <div className='w-75 centered-box'>
-            <div className='d-flex mt-6 mb-5'>
-                <MiniCard title='Web Dev' number='150'/>
-                <MiniCard title='Web Dev' number='255'/>
-                <MiniCard title='Web Dev' number='342'/>
-                <MiniCard title='Web Dev' number='89'/>
-            </div>
-            <Table/>
+    if (localStorage.length>=1) 
+    {
+       
+        const baseUrl ="http://localhost:8000/api"
+        const getAllStudents = () =>  
+        {
+            const requestOptions = {
+            method: 'GET',
+            headers: { 'Content-Type': 'application/json' },
+        };
+        fetch(`${baseUrl}/student/read.php`, requestOptions)
+            .then(response => response.json())
+            .then(data =>console.log(data))
+    }
         
-            {/* <div className='tab'>
-                <div>
-                    <B_card title1='Liste des Inscrits'/>
+       
+        return(
+            <div className='w-75 centered-box'>
+                <div className='d-flex mt-6 mb-5'>
+                    <MiniCard title='Web Dev' number='150'/>
+                    <MiniCard title="Reseau Telecom'" number='255'/>
+                    <MiniCard title='Cyber Security' number='342'/>
+                    <MiniCard title='Info-gestion' number='89'/>
                 </div>
-                <div className='d-flex'>
-                    <B_card title='Numero'/>
-                    <B_card title='Nom Comlpet'/>
-                    <B_card title='Date Inscription'/>
-                    <B_card title='Filier'/>
-                    <B_card title='Annee Inscription'/>
-                </div>
-                <div className='d-flex'>
-                    <B_card num='245'/>    
-                    <B_card nom='Abdou Aziz Ndiaye'/>
-                    <B_card date='25/08/19'/>
-                    <B_card fil=' web dev'/>
-                    <B_card annee='L1'/>
-                </div>
-                <div className='d-flex'>
-                    <B_card num='245'/>    
-                    <B_card nom='Abdou Aziz Ndiaye'/>
-                    <B_card date='25/08/19'/>
-                    <B_card fil=' web dev'/>
-                    <B_card annee='L1'/>
-                </div>
-            </div> */}
-        </div>
-        
-        
-    )
+                <Table/>      
+            </div>)
+    }else
+    {
+        window.location.replace("/homepage")
+    }
+
 }
 export default Dashboard;
