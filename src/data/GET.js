@@ -28,6 +28,6 @@ const getAllStudents = () =>
     };
     fetch(`${baseUrl}/student/read.php`, requestOptions)
         .then(response => response.json())
-        .then(data =>{return data})
+        .then(data =>console.log(data))
 }
 export  {getUser,getAllStudents}

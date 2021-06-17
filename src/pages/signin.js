@@ -6,7 +6,8 @@ import  {useState } from "react";
 import {AiOutlineMessage} from 'react-icons/ai'
 
 const SignUppage = () =>
-{
+{       
+        let message ="Merci de remplir tous les champs ."
         const [ input , setInput ] = useState({
                 mail : "",
                 password : "",
@@ -32,7 +33,8 @@ const SignUppage = () =>
                     }
                         if (formDatas.name==""   ||   formDatas.password=="") 
                         {
-                            console.log("Pourquoi t'es con ?")
+                            message="Veuillez remplir les champs"
+                            console.log("dfkffgk")
                         }else
                         {
                             if (formDatas.role=="1") 
@@ -76,6 +78,7 @@ const SignUppage = () =>
                         <option value="1"   onChange={()=>{handler()}}>Administrateur</option>
                         <option value="2"   onChange={()=>{handler()}}>Etudiant</option>
                  </select>
+                 <p className="text-small red-text mb-3 p-1">{message}</p>
                  </div>
             </div>
             <Button text="Se connecter " variant='primary' width='100' onclick={login}/>

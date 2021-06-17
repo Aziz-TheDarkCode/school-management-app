@@ -10,17 +10,17 @@ const Header = ()=>
     // window.location.replace("/signin")
     // window.location.reload();
     // return true
-    alert("MADA FUCK")
+  console.log("MADA FUCK")
 }
     if (localStorage.length>=1) 
     {
         return(
             <div className='d-flex header justify-content-between align-items-center p-3 w-100'>
-                <img src={logo} width='150px'/>
+                <img src={logo} width='150px' onClick={()=>{logout()}}s/>
                 <div className='d-flex header--menu'>
                     <Link to='/homepage' className='router-link'><NavLinks link='Accueil'/></Link>
-                    <Link to='/courses' className='router-link'><NavLinks link='Les formations'/></Link>
-                    <Link to='/signin' className='router-link'><NavLinks link='Deconnexion' onClick={()=>{logout()}}/></Link> 
+                    <Link to='/courses' className='router-link btn-primary btn'><NavLinks link='Les formations'/></Link>
+                    <Link to='/signin' className='router-link'><NavLinks link='Deconnexion' /></Link> 
                 </div> 
             </div>)
     }else{

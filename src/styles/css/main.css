@@ -194,6 +194,10 @@ a {
   top: 0;
 }
 
+.red-text {
+  color: red;
+}
+
 .btn {
   border: 1px solid transparent;
   background-color: transparent;

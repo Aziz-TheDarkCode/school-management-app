@@ -11,6 +11,7 @@ import {AiOutlineHistory} from 'react-icons/ai'
 import {AiOutlineMessage} from 'react-icons/ai'
 const SignUppage = () =>
 {
+    let message ="Merci de remplir tous les champs ."
     const [ input , setInput ] = useState({
         name : "",
         date_of_birth : "",
@@ -74,6 +75,7 @@ const login = ()=>
                    {/* <Input placeholder='Confirmer Mot de passe' icon={<AiOutlineKey/>} inputType='password' name = "passwordConfirm" onchange={handler}/> */}
                  </div>
             </div>
+            <p className="text-small red-text mb-4 p-2">{message}</p>
             <Link to='/signin'>
             <Button text="S'inscrire" variant='primary' width='100'  onclick={login}/>
                 </Link>
