@@ -3,7 +3,7 @@ import React from "react";
 import Homepage from './pages/home'
 import SignUppage from './pages/signup'
 import Loginpage from './pages/login'
-import{BrowserRouter as Router ,Route,Switch,Link} from 'react-router-dom'
+import{BrowserRouter as Router ,Route} from 'react-router-dom'
 import Coursepage from './pages/courses';
 import Dashboard from './pages/dashboard';
 import Fiche from './pages/fiche';

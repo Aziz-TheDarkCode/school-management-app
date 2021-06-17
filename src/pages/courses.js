@@ -1,7 +1,6 @@
 import Card from '../components/card'
 import Web from './web.png'
 import Network from './network.jpg'
-import { AiOutlineArrowRight} from "react-icons/ai";
 import Cyber from './cyber-security.jpg'
 import { Link } from 'react-router-dom';
 const Coursepage = ()=>

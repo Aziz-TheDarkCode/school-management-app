@@ -1,11 +1,10 @@
-import  BackgrounedSection from '../components/backgrounedSection'
 import{Link} from "react-router-dom"
 import Input from '../components/input'
 import Button from '../components/buttons'
 import {AiOutlineKey} from 'react-icons/ai'
 import {AiOutlineUser} from 'react-icons/ai'
 import {AiOutlineCalendar} from 'react-icons/ai'
-import  {useEffect ,useState } from "react";
+import  {useState } from "react";
 import PostData  from '../data/POST'
 import {AiOutlineBook} from 'react-icons/ai'
 import {AiOutlineHistory} from 'react-icons/ai'

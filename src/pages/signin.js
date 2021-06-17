@@ -1,12 +1,10 @@
-import  BackgrounedSection from '../components/backgrounedSection'
-import Form from '../components/form'
 import Input from '../components/input'
 import Button from '../components/buttons'
 import {getAllStudents, getUser}  from '../data/GET'
 import {AiOutlineKey} from 'react-icons/ai'
-import  {useEffect ,useState } from "react";
+import  {useState } from "react";
 import {AiOutlineMessage} from 'react-icons/ai'
-import { Redirect } from 'react-router-dom'
+
 const SignUppage = () =>
 {
         const [ input , setInput ] = useState({

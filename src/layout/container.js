@@ -20,7 +20,7 @@ const Container =()=>
                             du Sénégal et la plupart des organismes d’accréditation nationaux et 
                             internationaux. L’institut SUP’INFO est membre du Groupe SUP’INFO SENEGAL.
                         </p>
-                        <img src={presentation} width='500px'/>
+                        <img src={presentation} width='500px'  alt="this is the card's illustration"/>
                     </div>
                     
             </div>

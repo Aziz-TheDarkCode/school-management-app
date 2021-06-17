@@ -6,7 +6,7 @@ const Card = ({color,title,img,description,duration})=>
 {
     return(
         <div className='text-small d-flex card'>
-                <img  src={img} className='card--img'/>
+                <img  src={img} className='card--img' alt="this is the card's illustration"/>
                 <div className='px-2  '>
                         <p className='mt-3 text-medium text-bold mb-3'>{title}</p>
                         <p className='sm-lh'>{description}</p>

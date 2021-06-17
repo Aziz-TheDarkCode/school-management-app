@@ -6,10 +6,11 @@ const Header = ()=>
 {
     const logout = ()=>
 {
-    localStorage.clear()
-    window.location.replace("/signin")
-    window.location.reload();
-    return true
+    // localStorage.clear()
+    // window.location.replace("/signin")
+    // window.location.reload();
+    // return true
+    alert("MADA FUCK")
 }
     if (localStorage.length>=1) 
     {
@@ -19,8 +20,7 @@ const Header = ()=>
                 <div className='d-flex header--menu'>
                     <Link to='/homepage' className='router-link'><NavLinks link='Accueil'/></Link>
                     <Link to='/courses' className='router-link'><NavLinks link='Les formations'/></Link>
-                   <a onclick={()=>{logout()}}><Link to='/signin' className='router-link'><NavLinks link='Deconnexion'/></Link> </a> 
-                    <a href="#footer" className='router-link'><NavLinks link='Contact'/></a>
+                    <Link to='/signin' className='router-link'><NavLinks link='Deconnexion' onClick={()=>{logout()}}/></Link> 
                 </div> 
             </div>)
     }else{

@@ -1,7 +1,4 @@
 import Background from './header-bg.jpg'
-import Input from './input'
-import {AiOutlineKey} from 'react-icons/ai'
-import Form from './form'
 const BackgrounedSection =()=>
 {
     return(

@@ -1,4 +1,3 @@
-import Logo from './logo.jpg'
 const Footer =()=>
 {
     return(

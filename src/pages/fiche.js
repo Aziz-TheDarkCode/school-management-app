@@ -1,7 +1,8 @@
 import MiddleCard from '../components/middle-card'
 import Footer from '../layout/footer'
 function Fiche() {
-    if (localStorage.length>=1) 
+    const user = JSON.parse(localStorage.getItem("User"))
+    if (localStorage.length>=1 && user.faculty !==undefined) 
     {    
         return(
             <>

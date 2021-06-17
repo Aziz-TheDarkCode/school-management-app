@@ -1,11 +1,10 @@
 import MiniCard from '../components/minicard'
-import B_card from '../components/b-card.js'
 import Table from '../components/table'
-import { getAllStudents } from '../data/GET'
-import { useEffect } from 'react'
+
 
 function Dashboard(){
-    if (localStorage.length>=1) 
+    const user = JSON.parse(localStorage.getItem("User"))
+    if (localStorage.length>=1 && user.faculty ==undefined) 
     {
        
         const baseUrl ="http://localhost:8000/api"
