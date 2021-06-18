@@ -1,5 +1,6 @@
 import{Link} from "react-router-dom"
 import Input from '../components/input'
+import Background from "./header-bg.jpg"
 import Button from '../components/buttons'
 import {AiOutlineKey} from 'react-icons/ai'
 import {AiOutlineUser} from 'react-icons/ai'
@@ -43,9 +44,9 @@ const login = ()=>
 }
     return(
        <>
-         <div className='d-flex justify-content-between section p-3'>
-             <div className=' text-primary d-flex flex-column justify-content-center ml-5'>
-                <p className='text-primary text-larger mb-5'>SUP'INFO</p>
+         <div className='d-flex justify-content-between section p-3' style={{backgroundImage:`linear-gradient(to top, rgba(12, 12, 12, 0.56), rgba(12, 12, 12, 0.56)),url(${Background})`}}>
+             <div className='d-flex flex-column justify-content-center ml-5'>
+                <p className=' text-larger mb-5'>SUP'INFO</p>
                 <p className='text-larger'>INTERNATIONAL IT ACADEMY OF DAKAR</p>
              </div>
              <div className=' form col-4 p-3 mt-2'>
@@ -61,8 +62,8 @@ const login = ()=>
                     </div>
                  <select name="faculty" className='text-input w-100'   onChange={(event)=>{dropdownhandler(event)}}>
                         <option value="1">Web Developement</option>
-                        <option value="2">Cyber Security</option>
-                        <option value="3">Reseau Telecommunications</option>
+                        <option value="3">Cyber Security</option>
+                        <option value="2">Reseau Telecommunications</option>
                         <option value="4">Informatique de gestion</option>
                  </select>
                   </div>
@@ -72,7 +73,6 @@ const login = ()=>
                    <Input placeholder="Année d'inscription" icon={<AiOutlineHistory/>} inputType='text' name = "year" onchange={handler}/>
                    <Input placeholder='Adresse Mail' icon={<AiOutlineMessage/>} inputType='text' name = "mail" onchange={handler}/>
                    <Input placeholder='Mot de passe' icon={<AiOutlineKey/>} inputType='password' name = "password" onchange={handler}/>
-                   {/* <Input placeholder='Confirmer Mot de passe' icon={<AiOutlineKey/>} inputType='password' name = "passwordConfirm" onchange={handler}/> */}
                  </div>
             </div>
             <p className="text-small red-text mb-4 p-2">{message}</p>

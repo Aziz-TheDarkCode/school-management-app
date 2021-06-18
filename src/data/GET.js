@@ -10,14 +10,21 @@ const getUser = (userData,type) =>
         fetch(`${baseUrl}/${type}/readSingle.php`, requestOptions)
             .then(response => response.json())
             .then(data => {console.log(data)
-                // if (typeof(data.id)==undefined) 
-                // {
-                //     console.log("Mot de passe ou adresse mail incorrect ! ")  
-                // }
-                // else
-                // {
-                    localStorage.setItem("User",JSON.stringify(data))
-                // }     
+                    if (data.id==undefined) 
+                    {
+                        console.log("Not saved")    
+                    }else
+                    {
+                        localStorage.setItem("User",JSON.stringify(data)) 
+                        if (data.faculty==undefined) 
+                        {
+                            window.location.replace("/dashboard")    
+                        }else
+                        {
+                            window.location.replace("/fiche")
+                        }
+                    }
+                   
             });
 }
 const getAllStudents = () =>  
@@ -28,6 +35,6 @@ const getAllStudents = () =>
     };
     fetch(`${baseUrl}/student/read.php`, requestOptions)
         .then(response => response.json())
-        .then(data =>console.log(data))
+        .then(data =>localStorage.setItem("AllStudents",JSON.stringify(data)))
 }
 export  {getUser,getAllStudents}

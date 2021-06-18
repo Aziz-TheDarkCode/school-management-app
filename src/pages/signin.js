@@ -1,5 +1,6 @@
 import Input from '../components/input'
 import Button from '../components/buttons'
+import Background from "./header-bg.jpg"
 import {getAllStudents, getUser}  from '../data/GET'
 import {AiOutlineKey} from 'react-icons/ai'
 import  {useState } from "react";
@@ -41,20 +42,11 @@ const SignUppage = () =>
                             {
                                 getUser(input,"admins")
                                 const user = JSON.parse(localStorage.getItem("User"))
-                                getAllStudents() 
-                                if(localStorage.length>=1)
-                                {
-                                    window.location.replace("/dashboard")
-                                }
-                             
+                                getAllStudents()  
                             }else
                             {
                                 getUser(input,"student")
                                 const user = JSON.parse(localStorage.getItem("User"))
-                                if(localStorage.length>=1)
-                                {
-                                    window.location.replace("/fiche")
-                                }
                             }
                         }
                         
@@ -62,9 +54,9 @@ const SignUppage = () =>
             }
     return(
        <>
-         <div className='d-flex justify-content-between section p-3'>
-             <div className=' text-primary d-flex flex-column justify-content-center ml-5'>
-                <p className='text-primary text-larger mb-5'>SUP'INFO</p>
+         <div className='d-flex justify-content-between section p-3' style={{backgroundImage:`linear-gradient(to top, rgba(12, 12, 12, 0.56), rgba(12, 12, 12, 0.56)),url(${Background})`}}>
+             <div className='  d-flex flex-column justify-content-center ml-5'>
+                <p className='text-larger mb-5'>SUP'INFO</p>
                 <p className='text-larger'>INTERNATIONAL IT ACADEMY OF DAKAR</p>
              </div>
              <div className=' form col-4 p-3 mt-2'>

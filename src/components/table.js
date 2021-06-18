@@ -1,9 +1,12 @@
 import Row from './row'
-import {AiOutlineMenu} from 'react-icons/ai'
+import {AiOutlineMenu,AiFillCloseCircle,AiFillCheckCircle}  from 'react-icons/ai'
+
+
 import { getAllStudents } from '../data/GET'
+
 const Table =()=>
 {
-
+    const allStudents= JSON.parse(localStorage.getItem("AllStudents"))
     return(
         <div className='table w-100 p-3'>
             <div className='d-flex align-items-center mb-5 text-bold text-medium'>
@@ -12,13 +15,17 @@ const Table =()=>
             </div>
             <Row numb='Numero' name='Nom Complet' date="Date D'inscription" fil='Filiere' year="Année d'inscription"/>
             <div className="text-center"> 
-            {/* <Row numb='2020' name='Claudys Bikindou' date="20/07/19" fil='Web Dev' year="L2"/> */}
-            <Row numb='Numero' name='Nom Complet' date="Date D'inscription" fil='Filiere' year="Année d'inscription"/>
-            <Row numb='Numero' name='Nom Complet' date="Date D'inscription" fil='Filiere' year="Année d'inscription"/>
-            <Row numb='Numero' name='Nom Complet' date="Date D'inscription" fil='Filiere' year="Année d'inscription"/>
-            <Row numb='Numero' name='Nom Complet' date="Date D'inscription" fil='Filiere' year="Année d'inscription"/>
-            <Row numb='Numero' name='Nom Complet' date="Date D'inscription" fil='Filiere' year="Année d'inscription"/>
-            <Row numb='Numero' name='Nom Complet' date="Date D'inscription" fil='Filiere' year="Année d'inscription"/>
+           { allStudents.map(student => 
+                <div className="d-flex align-items-center justify-content-between">
+                    <Row numb={student.id} name={student.name} date={student.date_of_birth} fil={student.faculty} year={student.year}/>
+                    <div className='d-flex ml-5 mt-3'>
+                <div className="red-text mr-3"><AiFillCloseCircle/></div>
+                <div><AiFillCheckCircle/></div>
+                </div>
+                </div>
+                
+            )
+            }
             </div>
         </div>
     )

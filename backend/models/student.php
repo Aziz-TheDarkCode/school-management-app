@@ -9,7 +9,6 @@
          public $id;
 		  public $name;
 		  public $mail;
-		  
 		  public $date_of_birth;
 		 public $faculty;
 		 public $year;
@@ -94,26 +93,15 @@
 	 }
 	 public function update()
  {
-	 $query = 'UPDATE ' . $this->table . ' SET name = :name, mail = :mail, date_of_birth = :dob, faculty = :faculty, year=:year,password=:password WHERE id=:id';
+	 $query = 'UPDATE ' . $this->table . ' SET status = :status WHERE id=:id';
 
 	 $stmt = $this->conn->prepare($query);
 
 	 // Sanitize datas
-	 $this->name = htmlspecialchars(strip_tags($this->name));
-	 $this->mail = htmlspecialchars(strip_tags($this->mail));
-	 $this->date_of_birth = htmlspecialchars(strip_tags($this->date_of_birth));
-	 $this->faculty = htmlspecialchars(strip_tags($this->faculty));
-	 $this->year = htmlspecialchars(strip_tags($this->year));
-
+	 $this->status = htmlspecialchars(strip_tags($this->name));
+	
 	 //Bind values
-	 $stmt->bindParam(':name' , $this->name);
-	 $stmt->bindParam(':mail' , $this->mail);
-	 $stmt->bindParam(':dob' , $this->date_of_birth);
-	 $stmt->bindParam(':faculty' , $this->faculty);
-	 $stmt->bindParam(':password' , $this->password);
-	 $stmt->bindParam(':year' , $this->year);
-	 $stmt->bindParam(':id' , $this->id);
-										 
+	 $stmt->bindParam(':status' , $this->status);									 
 	 if($stmt->execute()) {
 		 return true;
 	 }
