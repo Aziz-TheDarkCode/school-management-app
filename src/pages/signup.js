@@ -40,6 +40,7 @@ const login = ()=>
         ...select,
         ...input
     }
+    console.log(formDatas)
      PostData(formDatas)
 }
     return(
@@ -61,9 +62,10 @@ const login = ()=>
                         <span className='ml-2'><AiOutlineBook/></span>
                     </div>
                  <select name="faculty" className='text-input w-100'   onChange={(event)=>{dropdownhandler(event)}}>
+                        <option>Choisir formation</option>
                         <option value="1">Web Developement</option>
-                        <option value="3">Cyber Security</option>
                         <option value="2">Reseau Telecommunications</option>
+                        <option value="3">Cyber Security</option>
                         <option value="4">Informatique de gestion</option>
                  </select>
                   </div>
